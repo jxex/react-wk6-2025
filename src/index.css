@@ -1,0 +1,17 @@
+@import "tailwindcss" source(none);
+@source "./pages";
+@source "./components";
+@plugin "daisyui";
+@plugin "daisyui/theme"{
+  name: "mytheme";
+  default: true; /* set as default */
+  prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+  color-scheme: light;
+  --color-primary: #6366F2;
+}
+
+body {
+  background-color: #213547;
+  min-width: 320px;
+  min-height: 100vh;
+}
