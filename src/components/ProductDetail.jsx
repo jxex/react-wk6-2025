@@ -1,7 +1,7 @@
 import AddToBasket from "./AddToBasket";
 import { useState } from 'react';
 
-function ProductDetail({ book, qty }){
+function ProductDetail({ book, qty, setQty }){
     return(
         <div className="grid grid-cols-1 lg:grid-cols-24 gap-8 justify-center">
             <div className="lg:col-span-6 lg:col-start-3">

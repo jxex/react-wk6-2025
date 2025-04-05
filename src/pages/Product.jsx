@@ -26,7 +26,7 @@ function Product(){
                 title="Books Detail"
                 slogan="If you love books, books love you too."
             />
-            <ProductDetail book={book} qty={qty} />
+            <ProductDetail book={book} qty={qty} setQty={setQty} />
             <Footer />
         </div>
     );
