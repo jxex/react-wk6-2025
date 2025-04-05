@@ -1,19 +1,23 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router'
+import './App.css'
+import { Provider } from 'react-redux'
 import Home from './pages/Home'
 import Product from './pages/Product'
-import './App.css'
+import store from './redux/store'
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="product">
-          <Route path="ID/:productId" element={<Product />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="product">
+            <Route path="ID/:productId" element={<Product />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   )
 }
 
